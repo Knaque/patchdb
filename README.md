@@ -5,7 +5,7 @@
 PatchDB is a Discord bot that collects presets and other producing goodies.
 
 ## Where do I get the presets?
-They're in the [Patches folder](https://github.com/Knaque/patchdb/tree/main/patches). They can be downloaded individually there, or if you want to download everything, click [here](https://github.com/Knaque/patchdb/archive/main.zip).
+They're in the [Patches folder](https://github.com/Knaque/patchdb/tree/main/Patches). They can be downloaded individually there, or if you want to download everything, click [here](https://github.com/Knaque/patchdb/archive/main.zip).
 
 ---
 
