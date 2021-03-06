@@ -1,17 +1,18 @@
-import strutils, osproc
+import strutils, osproc, strformat
 
 func fileType*(filename: string): string =
   # doesnt account for files w/o extensions, ok for now
   filename.split(".")[^1].toLower()
 
 proc pushPatches*() =
-  echo execProcess("git add ./patches").strip()
-  echo execProcess("git commit -m \"test commit in code\"").strip()
+  echo execProcess("git add ./Patches").strip()
+  echo execProcess(&"git commit -m \"added {n} presets\"").strip()
   echo execProcess("git push").strip()
 
 func extDir*(filename: string): string =
   case filename.fileType()
   of "bwpreset": result = "Bitwig Presets"
+  of "bwclip": result = "Bitwig Clips"
   of "wt", "vitaltable": result = "Wavetables"
   of "mid", "midi": result = "MIDI"
   of "vital": result = "Vital Presets"
