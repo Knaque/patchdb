@@ -19,6 +19,6 @@ bot.events.message_create = proc (s: Shard, m: Message) {.async.} =
       createDir(dir)
       await client.downloadFile(f.url, dir & f.filename)
       echo f.filename & " success"
-    pushPatches()
+    pushPatches(m.attachments.len)
 
 waitFor bot.startSession()

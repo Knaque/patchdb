@@ -4,7 +4,7 @@ func fileType*(filename: string): string =
   # doesnt account for files w/o extensions, ok for now
   filename.split(".")[^1].toLower()
 
-proc pushPatches*() =
+proc pushPatches*(n: int) =
   echo execProcess("git add ./Patches").strip()
   echo execProcess(&"git commit -m \"added {n} presets\"").strip()
   echo execProcess("git push").strip()
