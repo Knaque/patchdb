@@ -20,6 +20,7 @@ func extDir*(filename: string): string =
   of "wav", "aiff", "mp3", "ogg", "m4a", "aud": result = "Audio Files"
   of "helm": result = "Helm Presets"
   of "nmsv": result = "Massive Presets"
-  of "fxp": result = "Cubase HALion Files"
+  of "fxp": result = "Serum Presets"
+  of "pgtx": result = "Pigments Presets"
   else: result = "Miscellaneous"
   result.add("/")
